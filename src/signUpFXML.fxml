@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" stylesheets="@RoblesNetwork.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.signUpController">
+   <children>
+      <Button fx:id="backToLoginButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToLoginEvent" text="Back" />
+      <GridPane layoutX="682.0" layoutY="109.0" prefHeight="454.0" prefWidth="586.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="E-mail:" textAlignment="RIGHT" GridPane.rowIndex="6" />
+            <TextField fx:id="sign_firstName" promptText="First Name" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="sign_lastName" promptText="Last Name" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Password:" GridPane.rowIndex="1" />
+            <Label text="Confirm Password:" wrapText="true" GridPane.rowIndex="3" />
+            <Label text="Location:" GridPane.rowIndex="7" />
+            <Label text="Date of Birth:" wrapText="true" GridPane.rowIndex="8" />
+            <Label text="Interests:" GridPane.rowIndex="10" />
+            <TextField fx:id="sign_interests" promptText="Interests" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextField fx:id="sign_location" promptText="Location" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <PasswordField fx:id="sign_createPassword" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="sign_confirmPassword" promptText="Confirm Password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="sign_dob" promptText="Date of Birth" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="Age:" GridPane.rowIndex="9" />
+            <TextField fx:id="sign_age" promptText="Age" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="sign_createUsername" prefHeight="10.0" prefWidth="30.0" promptText="Username" GridPane.columnIndex="1" />
+            <Label text="Username:" />
+            <Label maxWidth="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="122.0" text="First Name:" textAlignment="RIGHT" GridPane.rowIndex="4" />
+            <Label text="Admin/User:" GridPane.rowIndex="2" />
+            <TextField fx:id="sign_option" promptText="Admin/User" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="sign_email" promptText="E-Mail" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Last Name:" textAlignment="RIGHT" GridPane.rowIndex="5" />
+            <Label fx:id="usernameError" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" />
+            <Label fx:id="passwordError" prefHeight="20.0" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="divisionError" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="matchError" maxWidth="-Infinity" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="firstNameError" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="lastNameError" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label fx:id="emailError" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label fx:id="locationError" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Label fx:id="dobError" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Label fx:id="ageError" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Label fx:id="interestsError" prefWidth="300.0" styleClass="error-label" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+         </children>
+      </GridPane>
+      <HBox layoutX="500.0" layoutY="43.0" prefHeight="61.0" prefWidth="550.0">
+         <children>
+            <Label styleClass="title-label" text="Welcome " />
+            <Label styleClass="title-label-white" text="New " />
+            <Label styleClass="title-label" text="User" />
+         </children>
+      </HBox>
+      <Button fx:id="createButton" layoutX="682.0" layoutY="569.0" mnemonicParsing="false" onAction="#addSignUpUser" prefHeight="29.0" prefWidth="250.0" text="Create Account" />
+   </children>
+</AnchorPane>
